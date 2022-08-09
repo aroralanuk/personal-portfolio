@@ -1,65 +1,65 @@
 export default interface BadgeDescription {
-  name: string,
-  colorScheme: string,
+  name: string;
+  colorScheme: string;
 }
 
 export const csharp = {
-  name: 'C#',
-  colorScheme: 'linkedin',
+  name: "C#",
+  colorScheme: "linkedin",
 };
 export const unity = {
-  name: 'unity',
-  colorScheme: 'red',
+  name: "unity",
+  colorScheme: "red",
 };
 export const apple = {
-  name: 'Apple AppStore',
-  colorScheme: 'telegram',
+  name: "Apple AppStore",
+  colorScheme: "telegram",
 };
 export const google = {
-  name: 'Google PlayStore',
-  colorScheme: 'purple',
+  name: "Google PlayStore",
+  colorScheme: "purple",
 };
 export const python3 = {
-  name: 'Python3',
-  colorScheme: 'facebook',
+  name: "Python3",
+  colorScheme: "facebook",
 };
 export const selenium = {
-  name: 'Selenium',
-  colorScheme: 'gray',
+  name: "Selenium",
+  colorScheme: "gray",
 };
 export const react = {
-  name: 'React',
-  colorScheme: 'teal',
+  name: "React",
+  colorScheme: "pink",
 };
 export const typescript = {
-  name: 'TypeScript',
-  colorScheme: 'pink',
+  name: "TypeScript",
+  colorScheme: "pink",
 };
 export const flashbots = {
-  name: 'FlashBots',
-  colorScheme: 'green',
+  name: "FlashBots",
+  colorScheme: "green",
 };
 export const ganache = {
-  name: 'Ganache',
-  colorScheme: 'orange',
+  name: "Ganache",
+  colorScheme: "orange",
 };
 export const hardhat = {
-  name: 'HardHat',
-  colorScheme: 'purple',
+  name: "HardHat",
+  colorScheme: "purple",
 };
 export const solidity = {
-  name: 'Solidity',
-  colorScheme: 'facebook',
+  name: "Solidity",
+  colorScheme: "facebook",
 };
 export const ethersjs = {
-  name: 'EthersJs',
-  colorScheme: 'blue',
+  name: "EthersJs",
+  colorScheme: "blue",
 };
 export const javascript = {
-  name: 'JavaScript',
-  colorScheme: 'yellow',
+  name: "JavaScript",
+  colorScheme: "yellow",
 };
 export const foundry = {
-  name: 'Foundry',
-  colorScheme: 'orange',
+  name: "Foundry",
+  colorScheme: "orange",
 };

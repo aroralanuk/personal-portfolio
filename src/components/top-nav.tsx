@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from "react";
 import {
   Box,
   Text,
@@ -16,34 +16,26 @@ import {
   Button,
   MenuItem,
   Icon,
-} from '@chakra-ui/react';
-import { NavLink as RouterNavLink } from 'react-router-dom';
-import { GiHamburgerMenu } from 'react-icons/gi';
-import {
-  FaGithub,
-  FaTwitter,
-  FaEthereum,
-} from 'react-icons/fa';
-import { AiOutlineClose } from 'react-icons/ai';
-import { BiChevronDown } from 'react-icons/bi';
-import { MdWeb } from 'react-icons/md';
-import ColorModeSwitcher from './ColorModeSwitcher';
-import UserIcon from '../assets/images/user_icon.png';
-import {
-  twitterHandle,
-  githubHandle,
-} from '../configs/site-config';
+} from "@chakra-ui/react";
+import { NavLink as RouterNavLink } from "react-router-dom";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { FaGithub, FaTwitter, FaEthereum } from "react-icons/fa";
+import { AiOutlineClose } from "react-icons/ai";
+import { BiChevronDown } from "react-icons/bi";
+import { MdWeb } from "react-icons/md";
+import UserIcon from "../assets/images/user_icon.png";
+import { twitterHandle, githubHandle } from "../configs/site-config";
 
 const webLinks = [
-  { name: 'Home', path: '/' },
-  { name: 'About', path: '/about' },
+  { name: "Home", path: "/" },
+  { name: "About", path: "/about" },
 ];
 
 const mobileLinks = [
-  { name: 'Web3 Projects', path: '/web3' },
-  { name: 'Web2 Projects', path: '/web2' },
-  { name: 'About', path: '/about' },
-  { name: 'Home', path: '/' },
+  { name: "Web3 Projects", path: "/web3" },
+  { name: "Web2 Projects", path: "/web2" },
+  { name: "About", path: "/about" },
+  { name: "Home", path: "/" },
 ];
 
 interface NavLinkProps {
@@ -66,11 +58,11 @@ function NavLink({
       py={1}
       rounded="md"
       _hover={{
-        textDecoration: 'none',
-        bg: useColorModeValue('gray.200', 'gray.900'),
+        textDecoration: "none",
+        bg: useColorModeValue("gray.200", "gray.900"),
       }}
       _activeLink={{
-        color: useColorModeValue('blue.500', 'blue.200'),
+        color: useColorModeValue("blue.500", "blue.200"),
       }}
       onClick={() => onClose()}
       to={path}
@@ -84,54 +76,30 @@ function TopNav() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const menuProps = {
-    bg: useColorModeValue('gray.200', 'gray.900'),
-    color: useColorModeValue('teal.800', 'teal.500'),
+    bg: useColorModeValue("gray.200", "gray.900"),
+    color: useColorModeValue("pink.800", "pink.500"),
   };
 
   return (
-    <Box bg={useColorModeValue('white', 'gray.700')} px={4} boxShadow="lg">
-      <Flex
-        h={16}
-        alignItems="center"
-        justifyContent="space-between"
-        w={['90%', '85%', '80%']}
-        maxW={800}
-        mx="auto"
-      >
+    <Box bg={useColorModeValue("white", "gray.700")} px={4} boxShadow="lg">
+      <Flex h={16} alignItems="center" justifyContent="space-between" w={["90%", "85%", "80%"]} maxW={800} mx="auto">
         <HStack spacing={4} alignItems="center">
           <IconButton
             size="md"
             icon={isOpen ? <AiOutlineClose /> : <GiHamburgerMenu />}
             aria-label="Open Menu"
-            display={['inherit', 'inherit', 'none']}
+            display={["inherit", "inherit", "none"]}
             onClick={isOpen ? onClose : onOpen}
           />
           <Box>
-            <Avatar
-              as={Link}
-              size="sm"
-              href="/"
-              src={UserIcon}
-            />
+            <Avatar as={Link} size="sm" href="/" src={UserIcon} />
           </Box>
-          <Text
-            color="gray.500"
-            display={['inherit', 'inherit', 'none']}
-          >
+          <Text color="gray.500" display={["inherit", "inherit", "none"]}>
             MouseLess.eth
           </Text>
-          <HStack
-            as="nav"
-            spacing={4}
-            display={{ base: 'none', md: 'flex' }}
-          >
+          <HStack as="nav" spacing={4} display={{ base: "none", md: "flex" }}>
             {webLinks.map((link) => (
-              <NavLink
-                key={link.toString()}
-                name={link.name}
-                path={link.path}
-                onClose={onClose}
-              />
+              <NavLink key={link.toString()} name={link.name} path={link.path} onClose={onClose} />
             ))}
             <Menu isLazy>
               <MenuButton
@@ -144,7 +112,7 @@ function TopNav() {
                 height="auto"
                 _hover={menuProps}
                 _expanded={menuProps}
-                _focus={{ boxShadow: 'outline' }}
+                _focus={{ boxShadow: "outline" }}
                 rightIcon={<BiChevronDown size={18} />}
               >
                 Projects
@@ -153,11 +121,7 @@ function TopNav() {
                 <Link as={RouterNavLink} to="/web3">
                   <MenuItem>
                     <HStack>
-                      <Icon
-                        as={FaEthereum}
-                        size={15}
-                        color={useColorModeValue('blue.500', 'blue.200')}
-                      />
+                      <Icon as={FaEthereum} size={15} color={useColorModeValue("blue.500", "blue.200")} />
                       <Text>Web 3</Text>
                     </HStack>
                   </MenuItem>
@@ -165,11 +129,7 @@ function TopNav() {
                 <Link as={RouterNavLink} to="/web2">
                   <MenuItem>
                     <HStack>
-                      <Icon
-                        as={MdWeb}
-                        size={15}
-                        color={useColorModeValue('blue.500', 'blue.200')}
-                      />
+                      <Icon as={MdWeb} size={15} color={useColorModeValue("blue.500", "blue.200")} />
                       <Text>Web 2</Text>
                     </HStack>
                   </MenuItem>
@@ -185,10 +145,10 @@ function TopNav() {
             size="md"
             icon={<FaTwitter />}
             aria-label="Twitter account"
-            bg={useColorModeValue('white', 'gray.700')}
+            bg={useColorModeValue("white", "gray.700")}
             _hover={{
-              textDecoration: 'none',
-              bg: useColorModeValue('gray.200', 'gray.900'),
+              textDecoration: "none",
+              bg: useColorModeValue("gray.200", "gray.900"),
             }}
             target="_blank"
           />
@@ -198,31 +158,20 @@ function TopNav() {
             size="md"
             icon={<FaGithub />}
             aria-label="Github account"
-            bg={useColorModeValue('white', 'gray.700')}
+            bg={useColorModeValue("white", "gray.700")}
             _hover={{
-              textDecoration: 'none',
-              bg: useColorModeValue('gray.200', 'gray.900'),
+              textDecoration: "none",
+              bg: useColorModeValue("gray.200", "gray.900"),
             }}
             target="_blank"
           />
-          <ColorModeSwitcher justifySelf="flex-end" />
         </Flex>
       </Flex>
       {isOpen ? (
-        <Box
-          pb={4}
-          w={['100%', '100%', '80%']}
-          maxW={800}
-          display={['inherit', 'inherit', 'none']}
-        >
+        <Box pb={4} w={["100%", "100%", "80%"]} maxW={800} display={["inherit", "inherit", "none"]}>
           <Stack as="nav" spacing={4}>
             {mobileLinks.map((link) => (
-              <NavLink
-                index={link.toString()}
-                name={link.name}
-                path={link.path}
-                onClose={onClose}
-              />
+              <NavLink index={link.toString()} name={link.name} path={link.path} onClose={onClose} />
             ))}
           </Stack>
         </Box>

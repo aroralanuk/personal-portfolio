@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { extendTheme } from '@chakra-ui/react';
-import { mode } from '@chakra-ui/theme-tools';
+import { extendTheme } from "@chakra-ui/react";
+import { mode } from "@chakra-ui/theme-tools";
 
 export const theme = extendTheme({
   fonts: {
@@ -10,25 +10,25 @@ export const theme = extendTheme({
   styles: {
     global: (props: any) => ({
       body: {
-        color: mode('gray.700', 'whiteAlpha.900')(props),
-        bg: mode('gray.50', 'gray.900')(props),
-        fontSize: '1.2em',
-        '.deleted': {
-          color: '#ff8383 !important',
-          fontStyle: 'normal !important',
+        color: mode("gray.700", "whipinkpha.900")(props),
+        bg: mode("gray.50", "gray.900")(props),
+        fontSize: "1.2em",
+        ".deleted": {
+          color: "#ff8383 !important",
+          fontStyle: "normal !important",
         },
-        '.inserted': {
-          color: '#b5f4a5 !important',
-          fontStyle: 'normal !important',
+        ".inserted": {
+          color: "#b5f4a5 !important",
+          fontStyle: "normal !important",
         },
       },
       a: {
-        color: mode('blue.500', 'blue.200')(props),
-        transition: 'color 0.15s',
-        transitionTimingFunction: 'ease-out',
-        fontWeight: '500',
+        color: mode("blue.500", "blue.200")(props),
+        transition: "color 0.15s",
+        transitionTimingFunction: "ease-out",
+        fontWeight: "500",
         _hover: {
-          color: mode('blue.600', 'blue.300')(props),
+          color: mode("blue.600", "blue.300")(props),
         },
       },
     }),
@@ -53,11 +53,11 @@ export const theme = extendTheme({
     //   }
     // },
     Popover: {
-      parts: ['popper'],
+      parts: ["popper"],
       baseStyle: (props: any) => ({
         popper: {
           zIndex: 10,
-          maxW: 'xs',
+          maxW: "xs",
           // maxW: props.width ? props.width : 'xs',
           w: props.width,
         },
@@ -65,44 +65,44 @@ export const theme = extendTheme({
     },
     Button: {
       baseStyle: {
-        fontWeight: '500',
-        rounded: 'xl',
+        fontWeight: "500",
+        rounded: "xl",
       },
     },
     Tag: {
       baseStyle: {
-        rounded: 'lg',
+        rounded: "lg",
       },
     },
     textarea: {
       baseStyle: {
-        background: 'green.300',
+        background: "green.300",
       },
     },
     Link: {
       baseStyle: {
-        fontWeight: 'inherit',
+        fontWeight: "inherit",
         _hover: {
-          textDecoration: 'none',
+          textDecoration: "none",
         },
       },
       variants: {
         text: {
-          color: 'blue.400',
-          transition: 'color 0.15s',
-          transitionTimingFunction: 'ease-out',
-          fontWeight: '500',
+          color: "blue.400",
+          transition: "color 0.15s",
+          transitionTimingFunction: "ease-out",
+          fontWeight: "500",
           _hover: {
-            color: 'blue.300',
+            color: "blue.300",
           },
         },
         gradient: {
-          bgGradient: 'linear(to-br, blue.400,blue.300)',
-          bgClip: 'text',
-          fontWeight: '500',
+          bgGradient: "linear(to-br, blue.400,blue.300)",
+          bgClip: "text",
+          fontWeight: "500",
           _hover: {
-            bgGradient: 'linear(to-br, blue.500,blue.300)',
-            bgClip: 'text',
+            bgGradient: "linear(to-br, blue.500,blue.300)",
+            bgClip: "text",
           },
         },
       },
@@ -110,85 +110,85 @@ export const theme = extendTheme({
   },
   mdx: {
     h1: {
-      mt: '2rem',
-      mb: '.25rem',
+      mt: "2rem",
+      mb: ".25rem",
       lineHeight: 1.2,
-      fontWeight: 'bold',
-      fontSize: '1.875rem',
-      letterSpacing: '-.025em',
+      fontWeight: "bold",
+      fontSize: "1.875rem",
+      letterSpacing: "-.025em",
     },
     h2: {
-      mt: '4rem',
-      mb: '0.5rem',
+      mt: "4rem",
+      mb: "0.5rem",
       lineHeight: 1.3,
-      fontWeight: 'semibold',
-      fontSize: '1.5rem',
-      '& + h3': {
-        mt: '1.5rem',
+      fontWeight: "semibold",
+      fontSize: "1.5rem",
+      "& + h3": {
+        mt: "1.5rem",
       },
     },
     h3: {
-      mt: '3rem',
+      mt: "3rem",
       // mb: '0.5rem',
       lineHeight: 1.25,
-      fontWeight: 'semibold',
-      fontSize: '1.25rem',
+      fontWeight: "semibold",
+      fontSize: "1.25rem",
     },
     h4: {
-      mt: '3rem',
+      mt: "3rem",
       lineHeight: 1.375,
-      fontWeight: 'semibold',
-      fontSize: '1.125rem',
+      fontWeight: "semibold",
+      fontSize: "1.125rem",
     },
     p: {
-      mt: '1.25rem',
+      mt: "1.25rem",
       lineHeight: 1.7,
-      'blockquote &': {
+      "blockquote &": {
         mt: 0,
       },
     },
     hr: {
-      my: '4rem',
+      my: "4rem",
     },
     blockquote: {
-      bg: 'orange.100',
-      borderWidth: '1px',
-      borderColor: 'orange.200',
-      rounded: 'lg',
-      px: '1.25rem',
-      py: '1rem',
-      my: '1.5rem',
+      bg: "orange.100",
+      borderWidth: "1px",
+      borderColor: "orange.200",
+      rounded: "lg",
+      px: "1.25rem",
+      py: "1rem",
+      my: "1.5rem",
     },
     ul: {
-      mt: '1.5rem',
-      ml: '1.25rem',
-      'blockquote &': { mt: 0 },
-      '& > * + *': {
-        mt: '0.25rem',
+      mt: "1.5rem",
+      ml: "1.25rem",
+      "blockquote &": { mt: 0 },
+      "& > * + *": {
+        mt: "0.25rem",
       },
     },
     code: {
-      rounded: 'sm',
-      px: '1',
-      fontSize: '0.875em',
-      py: '2px',
-      whiteSpace: 'nowrap',
-      lineHeight: 'normal',
+      rounded: "sm",
+      px: "1",
+      fontSize: "0.875em",
+      py: "2px",
+      whiteSpace: "nowrap",
+      lineHeight: "normal",
     },
   },
 });
 
 export const getTagColor = (type: any) => {
-  type = type.toLowerCase()
-  if (type === 'rails' || type === 'ruby') {
-    return 'red';
-  } else if (type === 'react') {
-    return 'cyan';
-  } else if (type === 'javascript') {
-    return 'yellow';
-  } else if (type === 'typescript' || type === 'tailwindcss') {
-    return 'blue';
-  } else if (type === 'chakraui' || type === 'css') {
-    return 'teal';
+  type = type.toLowerCase();
+  if (type === "rails" || type === "ruby") {
+    return "red";
+  } else if (type === "react") {
+    return "cyan";
+  } else if (type === "javascript") {
+    return "yellow";
+  } else if (type === "typescript" || type === "tailwindcss") {
+    return "blue";
+  } else if (type === "chakraui" || type === "css") {
+    return "pink";
   }
 };
